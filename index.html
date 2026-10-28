@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Antojo | Obleas Cuchareables - Universidad Popular del Cesar</title>
+
+  <!-- Línea agregada para el logo en la pestaña (Favicon) -->
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="contenedor nav-container">
+      <a href="#inicio" class="logo">
+        <img src="img/logo.jpg" alt="Logo Dulce Antojo" class="logo-img">
+        <span class="logo-texto">Dulce <em>Antojo</em></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="activo">Inicio</a>
+        <a href="#menu">Nuestro Producto</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Ubícanos</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contacto" class="btn btn-primary btn-nav">Visítanos</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="contenedor hero-grid">
+      <div class="hero-contenido fade-up">
+        <span class="hero-tag">Feria de Emprendimiento - UPC</span>
+        <h1>El antojo perfecto en cada <span>cucharada</span></h1>
+        <p>Descubre una forma diferente y deliciosa de disfrutar la oblea tradicional. Combinamos trozos de oblea,
+          fresas naturales, crema chantilly, arequipe y más.</p>
+        <div class="hero-botones">
+          <a href="#menu" class="btn btn-primary">Conoce el Producto</a>
+          <a href="#contacto" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Ubícanos</a>
+        </div>
+      </div>
+      <div class="hero-imagen fade-up">
+        <!-- Imagen de portada apetitosa -->
+        <img src="img/5.jpg" alt="Oblea Cuchareable Dulce Antojo">
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS / VALORES -->
+  <section class="seccion valores">
+    <div class="contenedor valores-grid">
+      <div class="valor-card fade-up">
+        <div class="valor-icon"><i class="fas fa-ice-cream"></i></div>
+        <h3>Ingredientes Reales</h3>
+        <p>Fresas naturales, arequipe de la mejor calidad y trozos de oblea crujiente.</p>
+      </div>
+      <div class="valor-card fade-up">
+        <div class="valor-icon"><i class="fas fa-heart"></i></div>
+        <h3>Hechas a Mano</h3>
+        <p>Preparadas al momento para garantizar la mejor textura y sabor en cada bocado.</p>
+      </div>
+      <div class="valor-card fade-up">
+        <div class="valor-icon"><i class="fas fa-star"></i></div>
+        <h3>Experiencia Única</h3>
+        <p>Una fusión de sabores dulces y texturas que te enamorarán.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VITRINA / MENU PUBLICITARIO -->
+  <section class="seccion menu" id="menu">
+    <div class="contenedor">
+      <div class="seccion-header fade-up">
+        <span class="seccion-tag">Nuestra Creación</span>
+        <h2 class="titulo-seccion">La <span>Oblea Cuchareable</span></h2>
+        <p class="subtitulo-seccion">Un postre atractivo y lleno de sabor, ideal para consentirte en el campus
+          universitario.</p>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- Producto 1 -->
+        <div class="menu-card fade-up">
+          <div class="menu-img-wrapper">
+            <img src="img/1.jpg" alt="Oblea Tradicional" class="menu-img">
+            <span class="badge">Favorita</span>
+          </div>
+          <div class="menu-info">
+            <h3>Dulce Antojo Clásica</h3>
+            <p>La combinación perfecta: trozos de oblea, arequipe, queso rallado, crema chantilly y salsa de fresa
+              natural.</p>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="menu-card fade-up">
+          <div class="menu-img-wrapper">
+            <img src="img/2.jpg" alt="Oblea de Fresa" class="menu-img">
+            <span class="badge rosa">Especial</span>
+          </div>
+          <div class="menu-info">
+            <h3>Fusión de Fresas</h3>
+            <p>Fresas frescas picadas combinadas con una doble porción de arequipe y crema chantilly.</p>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="menu-card fade-up">
+          <div class="menu-img-wrapper">
+            <img src="img/3.jpg" alt="Oblea de Chocolate" class="menu-img">
+          </div>
+          <div class="menu-info">
+            <h3>Explosión de Sabores</h3>
+            <p>Arecipe, trozos de oblea, crema, salsa de fresa y una lluvia de toppings crujientes.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="seccion nosotros" id="nosotros">
+    <div class="contenedor nosotros-grid">
+      <div class="nosotros-imagen fade-up">
+        <img src="img/6.jpg" alt="Estudiantes preparando Obleas Dulce Antojo">
+      </div>
+      <div class="nosotros-info fade-up">
+        <span class="seccion-tag">Nuestra Historia</span>
+        <h2>Un emprendimiento lleno de <span>dulzura</span></h2>
+        <p><strong>Dulce Antojo</strong> es un emprendimiento dedicado a la elaboración y venta de obleas cuchareables.
+          Queríamos innovar en la forma de comer obleas, creando una experiencia que se pudiera disfrutar en cada
+          cucharada.</p>
+        <p>Nuestro producto combina trozos de oblea con fresas naturales, crema chantilly, arequipe, salsa de fresa,
+          queso y otros toppings. Ofrecemos un postre atractivo y lleno de sabor, preparado con dedicación para la
+          comunidad universitaria.</p>
+
+        <ul class="nosotros-lista">
+          <li><i class="fas fa-check-circle"></i> Innovación en postres tradicionales</li>
+          <li><i class="fas fa-check-circle"></i> Apoyo al emprendimiento local y universitario</li>
+          <li><i class="fas fa-check-circle"></i> Preparación con ingredientes frescos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO / UBICACIÓN -->
+  <section class="seccion contacto" id="contacto">
+    <div class="contenedor">
+      <div class="contacto-box fade-up">
+        <div class="contacto-info">
+          <h2>Visítanos en la Feria</h2>
+          <p>Estamos ubicados dentro de las instalaciones de la Universidad Popular del Cesar. ¡Ven y prueba nuestra
+            deliciosa propuesta!</p>
+
+          <div class="contacto-datos">
+            <div class="contacto-item">
+              <div class="icono"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span>Ubicación</span>
+                <strong>Universidad Popular del Cesar</strong>
+                <p style="font-size: 0.85rem; color: var(--texto-suave); margin: 0;">Feria de Emprendimiento</p>
+              </div>
+            </div>
+
+            <div class="contacto-item">
+              <div class="icono"><i class="fas fa-clock"></i></div>
+              <div>
+                <span>Horario de Atención</span>
+                <strong>Durante la feria</strong>
+                <p style="font-size: 0.85rem; color: var(--texto-suave); margin: 0;">Jornadas académicas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-cta-imagen">
+          <div class="cta-flotante">
+            <i class="fas fa-store"></i>
+            <span>¡Te esperamos!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="contenedor footer-content">
+      <div class="footer-logo">
+        <img src="img/logo.jpg" alt="Logo Dulce Antojo">
+        <h3>Dulce <em>Antojo</em></h3>
+      </div>
+      <p>El placer de un buen postre, en un solo bocado.</p>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dulce Antojo. Emprendimiento Universitario - Universidad Popular del Cesar. Desarrollado por
+          SoftGA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
