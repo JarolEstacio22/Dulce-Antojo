@@ -58,7 +58,6 @@ img { max-width: 100%; display: block; }
 
 .titulo-seccion { font-size: 2.8rem; color: var(--marron); margin-bottom: 12px; }
 .titulo-seccion span { color: var(--rosa); }
-
 .subtitulo-seccion { font-size: 1.1rem; color: var(--texto-suave); max-width: 600px; margin: 0 auto; }
 
 /* BOTONES */
@@ -220,7 +219,11 @@ img { max-width: 100%; display: block; }
    VITRINA / MENU
    ============================================================ */
 .menu { background: var(--fondo-crema); }
-.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+.menu-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+  gap: 30px; 
+}
 
 .menu-card {
   background: var(--blanco);
@@ -233,7 +236,7 @@ img { max-width: 100%; display: block; }
 }
 .menu-card:hover { transform: translateY(-8px); box-shadow: var(--sombra-hover); }
 
-.menu-img-wrapper { position: relative; overflow: hidden; height: 240px; }
+.menu-img-wrapper { position: relative; overflow: hidden; height: 280px; }
 .menu-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .menu-card:hover .menu-img { transform: scale(1.08); }
 
@@ -246,8 +249,48 @@ img { max-width: 100%; display: block; }
 .badge.rosa { background: var(--rosa); }
 
 .menu-info { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
-.menu-info h3 { font-size: 1.3rem; color: var(--marron); margin-bottom: 8px; }
-.menu-info p { font-size: 0.95rem; color: var(--texto-suave); flex-grow: 1; }
+.menu-info h3 { font-size: 1.4rem; color: var(--marron); margin-bottom: 8px; }
+
+/* Texto de marketing llamativo dentro de la tarjeta */
+.marketing-text {
+  font-size: 0.95rem;
+  color: var(--rosa) !important; 
+  font-weight: 800;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+/* Lista de ingredientes */
+.ingredientes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--rosa-claro);
+}
+
+.ingredientes-lista li {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.ingredientes-lista li i {
+  color: var(--rosa);
+  font-size: 0.75rem;
+  margin-top: 4px; 
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 1200px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes para que las listas respiren */
+  }
+}
 
 /* ============================================================
    NOSOTROS
@@ -340,6 +383,77 @@ img { max-width: 100%; display: block; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; width: 100%; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
 
 /* ============================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ============================================================ */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  z-index: 2000; /* Asegura que esté por encima de todo */
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+
+/* Tooltip (Texto que aparece al pasar el mouse) */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 80px;
+  background-color: var(--marron);
+  color: var(--blanco);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Flechita del tooltip */
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--marron);
+}
+
+.whatsapp-btn:hover .whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 85px; /* Pequeño efecto de deslizamiento */
+}
+
+/* Animación de pulso */
+@keyframes whatsapp-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 992px) {
@@ -371,6 +485,18 @@ img { max-width: 100%; display: block; }
   
   .titulo-seccion { font-size: 2rem; }
   .contacto-info { padding: 30px; }
+
+  /* Ajuste del botón de WhatsApp en móviles */
+  .whatsapp-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-tooltip {
+    display: none; /* En móviles no se necesita el tooltip */
+  }
 }
 
 @media (max-width: 480px) {
